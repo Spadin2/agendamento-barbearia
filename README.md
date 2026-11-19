@@ -24,7 +24,7 @@ SAAS de agendamento para barbearias. Cada negócio é um **tenant**: tem seus pr
 
 - Back-end: Java + Spring Boot (Spring Data JPA, Spring Security)
 - Front-end: HTML, CSS e JavaScript
-- Banco de dados: SQL Server
+- Banco de dados: MySQL
 - Controle de versão: Git + GitHub
 - Testes de API: Postman
 
