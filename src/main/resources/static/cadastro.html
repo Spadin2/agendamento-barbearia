@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10281f">
+  <title>Criar conta - AgendaFácil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="toldo" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="marca" href="index.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg><span>AgendaFácil</span></a>
+    <nav><a class="btn btn-sec btn-peq" href="login.html">Já tenho conta</a></nav>
+  </header>
+
+  <main class="auth-centro">
+    <section class="auth moldura">
+      <h1>Criar conta</h1>
+
+      <div class="alternar">
+        <button type="button" id="aba-cliente" class="aba ativa">Sou cliente</button>
+        <button type="button" id="aba-empresa" class="aba">Tenho uma barbearia</button>
+      </div>
+
+      <form id="form-cliente">
+        <label for="empresa-id">Barbearia</label>
+        <select id="empresa-id" required></select>
+        <label for="c-nome">Seu nome</label>
+        <input id="c-nome" type="text" maxlength="120" required>
+        <label for="c-email">E-mail</label>
+        <input id="c-email" type="email" maxlength="150" autocomplete="username" required>
+        <label for="c-senha">Senha (6 a 72 caracteres)</label>
+        <input id="c-senha" type="password" minlength="6" maxlength="72" autocomplete="new-password" required>
+        <div class="form-acoes"><button class="btn" type="submit">Criar conta</button></div>
+      </form>
+
+      <form id="form-empresa" hidden>
+        <label for="e-empresa">Nome da barbearia</label>
+        <input id="e-empresa" type="text" maxlength="120" required>
+        <label for="e-cnpj">CNPJ (opcional)</label>
+        <input id="e-cnpj" type="text" maxlength="18">
+        <label for="e-nome">Seu nome</label>
+        <input id="e-nome" type="text" maxlength="120" required>
+        <label for="e-email">E-mail</label>
+        <input id="e-email" type="email" maxlength="150" autocomplete="username" required>
+        <label for="e-senha">Senha (6 a 72 caracteres)</label>
+        <input id="e-senha" type="password" minlength="6" maxlength="72" autocomplete="new-password" required>
+        <div class="form-acoes"><button class="btn" type="submit">Cadastrar barbearia</button></div>
+      </form>
+
+      <p id="erro" class="erro-form" role="alert"></p>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/cadastro.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10281f">
+  <title>Entrar - AgendaFácil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="toldo" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="marca" href="index.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg><span>AgendaFácil</span></a>
+  </header>
+
+  <main class="auth-centro">
+    <section class="auth moldura">
+      <h1>Entrar na agenda</h1>
+      <form id="form-login">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" autocomplete="username" required>
+        <label for="senha">Senha</label>
+        <input id="senha" type="password" autocomplete="current-password" required>
+        <p id="erro" class="erro-form" role="alert"></p>
+        <div class="form-acoes">
+          <button class="btn" type="submit">Entrar</button>
+          <a class="btn btn-sec" href="cadastro.html">Criar conta</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

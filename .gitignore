@@ -1,0 +1,28 @@
+# Build
+target/
+out/
+HELP.md
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Segredos e configuração local (NUNCA commitar)
+.env
+*.env
+application-local.properties
+application-secret.properties
+
+# Logs e backups de banco
+*.log
+logs/
+*.dump
+*.bak
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+*.sql

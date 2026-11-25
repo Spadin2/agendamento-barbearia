@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10281f">
+  <title>AgendaFácil · Agenda online para barbearias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="toldo" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="marca" href="index.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg><span>AgendaFácil</span></a>
+    <nav>
+      <a class="btn btn-sec btn-peq" href="login.html">Entrar</a>
+      <a class="btn btn-peq" href="cadastro.html">Criar conta</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1 class="folha-ouro">Sua barbearia com a agenda sempre em dia</h1>
+        <p class="lead">O cliente escolhe o serviço, o profissional e um horário livre. Você vê o dia inteiro da cadeira em um só lugar.</p>
+        <div class="form-acoes">
+          <a class="btn" href="cadastro.html">Cadastrar minha barbearia</a>
+          <a class="btn btn-sec" href="login.html">Já tenho conta</a>
+        </div>
+      </div>
+
+      <figure class="livro">
+        <h3>Agenda de hoje</h3>
+        <ul>
+          <li class="ocupado"><time>09:00</time><span>Corte de cabelo</span><b>marcado</b></li>
+          <li class="ocupado"><time>09:30</time><span>Barba</span><b>marcado</b></li>
+          <li><time>10:00</time><span>horário livre</span><b>livre</b></li>
+          <li><time>10:30</time><span>horário livre</span><b>livre</b></li>
+          <li class="ocupado"><time>11:00</time><span>Corte de cabelo</span><b>marcado</b></li>
+          <li><time>11:30</time><span>horário livre</span><b>livre</b></li>
+        </ul>
+        <figcaption>Exemplo de agenda de um profissional</figcaption>
+      </figure>
+    </section>
+
+    <section class="secao">
+      <h2>Como o cliente agenda</h2>
+      <ol class="etapas">
+        <li class="etapa"><h3>Escolhe o serviço</h3><p>Corte, barba ou qualquer outro serviço que a barbearia cadastrou.</p></li>
+        <li class="etapa"><h3>Escolhe o profissional</h3><p>Cada barbeiro tem a própria agenda, sem choque de horário.</p></li>
+        <li class="etapa"><h3>Pega um horário livre</h3><p>Só aparecem os horários que ainda não foram ocupados.</p></li>
+      </ol>
+    </section>
+
+    <section class="secao secao-dupla">
+      <div>
+        <h2>Cada barbearia monta o seu cardápio</h2>
+        <p class="mudo">O dono cadastra os serviços com duração e preço, e pode desativar um serviço quando quiser, sem perder o histórico.</p>
+      </div>
+      <div class="cardapio moldura">
+        <h3>Cardápio</h3>
+        <ul>
+          <li><span>Corte de cabelo</span><span class="pontos"></span><span class="duracao">30 min</span><span class="preco">R$ 40</span></li>
+          <li><span>Barba</span><span class="pontos"></span><span class="duracao">20 min</span><span class="preco">R$ 25</span></li>
+        </ul>
+        <p class="mudo">Exemplo. Cada barbearia define os seus.</p>
+      </div>
+    </section>
+
+    <section class="secao">
+      <h2>Cada um com a sua tela</h2>
+      <div class="papeis">
+        <div class="papel"><h3>Cliente</h3><p>Marca e cancela o próprio horário, sem precisar ligar para a barbearia.</p></div>
+        <div class="papel"><h3>Profissional</h3><p>Vê só a própria agenda e marca o atendimento como concluído.</p></div>
+        <div class="papel"><h3>Dono</h3><p>Cadastra serviços e equipe e acompanha a agenda de todos.</p></div>
+      </div>
+    </section>
+
+    <section class="chamada moldura">
+      <h2>Abra a agenda da sua barbearia</h2>
+      <p class="mudo">O cadastro leva um minuto.</p>
+      <div class="form-acoes"><a class="btn" href="cadastro.html">Cadastrar minha barbearia</a></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="piso" aria-hidden="true"></div>
+    <p class="rodape">AgendaFácil, projeto acadêmico.</p>
+  </footer>
+</body>
+</html>

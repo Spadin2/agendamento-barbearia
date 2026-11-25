@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10281f">
+  <title>Painel - AgendaFácil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="toldo toldo-fino" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="marca"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg><span>AgendaFácil</span><small id="nome-empresa"></small></div>
+    <div class="usuario">
+      <span id="nome-usuario"></span>
+      <button id="btn-sair" class="btn btn-sec btn-peq" type="button">Sair</button>
+    </div>
+  </header>
+
+  <div class="boas-vindas"><p id="saudacao" class="saudacao"></p></div>
+
+  <nav id="abas" class="abas"></nav>
+
+  <main class="conteudo">
+
+    <!-- CLIENTE: novo agendamento -->
+    <section id="sec-novo" class="painel-sec" hidden>
+      <h2>Novo agendamento</h2>
+      <div class="caixa">
+        <div class="linha">
+          <div><label for="sel-servico">Serviço</label><select id="sel-servico"></select></div>
+          <div><label for="sel-func">Profissional</label><select id="sel-func"></select></div>
+          <div><label for="data-agendamento">Data</label><input id="data-agendamento" type="date"></div>
+        </div>
+        <div class="form-acoes">
+          <button id="btn-horarios" class="btn btn-sec" type="button">Ver horários livres</button>
+        </div>
+        <p id="aviso-horarios" class="mudo"></p>
+        <div id="slots" class="slots"></div>
+        <div class="form-acoes">
+          <button id="btn-confirmar" class="btn" type="button" disabled>Confirmar agendamento</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Agenda (todos os perfis) -->
+    <section id="sec-agenda" class="painel-sec" hidden>
+      <h2 id="titulo-agenda">Agenda</h2>
+      <div id="lista-agenda"></div>
+    </section>
+
+    <!-- DONO: serviços -->
+    <section id="sec-servicos" class="painel-sec" hidden>
+      <h2>Serviços</h2>
+      <form id="form-servico" class="caixa">
+        <h3 id="titulo-form-servico">Novo serviço</h3>
+        <div class="linha">
+          <div><label for="s-nome">Nome</label><input id="s-nome" type="text" maxlength="100" required></div>
+          <div><label for="s-duracao">Duração (min)</label><input id="s-duracao" type="number" min="5" max="480" step="5" required></div>
+          <div><label for="s-preco">Preço (R$)</label><input id="s-preco" type="number" min="0" step="0.01" required></div>
+        </div>
+        <div class="form-acoes">
+          <button class="btn" type="submit">Salvar serviço</button>
+          <button id="btn-cancelar-edicao" class="btn btn-sec" type="button" hidden>Cancelar edição</button>
+        </div>
+      </form>
+      <div id="lista-servicos"></div>
+    </section>
+
+    <!-- DONO: equipe -->
+    <section id="sec-equipe" class="painel-sec" hidden>
+      <h2>Equipe</h2>
+      <form id="form-equipe" class="caixa">
+        <h3>Novo profissional</h3>
+        <div class="linha">
+          <div><label for="f-nome">Nome</label><input id="f-nome" type="text" maxlength="120" required></div>
+          <div><label for="f-email">E-mail</label><input id="f-email" type="email" maxlength="150" required></div>
+          <div><label for="f-senha">Senha inicial</label><input id="f-senha" type="password" minlength="6" maxlength="72" autocomplete="new-password" required></div>
+        </div>
+        <div class="form-acoes"><button class="btn" type="submit">Cadastrar profissional</button></div>
+      </form>
+      <div id="lista-equipe"></div>
+    </section>
+
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="js/api.js"></script>
+  <script src="js/painel.js"></script>
+</body>
+</html>
